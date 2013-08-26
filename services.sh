@@ -68,7 +68,7 @@ transportCustomLoggingConf()
 {
     if [ ! -f $BS_ES_PATH_CONF/logging.yml ] && [ -f $BS_ROOT_DIRECTORY/etc/elasticsearch/logging.yml ]; then
 
-        sudo cp $BS_ROOT_DIRECTORY/etc/elasticsearch/logging.yml $BS_ES_PATH_CONF/logging.yml
+        sudo cp $BS_ROOT_DIRECTORY/etc/elasticsearch/logging.yml $BS_ES_PATH_CONF
 
     elif [ -f $BS_ES_PATH_CONF/logging.yml ] && [ -f $BS_ROOT_DIRECTORY/etc/elasticsearch/logging.yml ]; then
 
@@ -76,7 +76,7 @@ transportCustomLoggingConf()
         local srcFile=$(sudo md5sum $BS_ROOT_DIRECTORY/etc/elasticsearch/logging.yml)
 
         if [ "$destFile" != "$srcFile" ]; then
-            sudo cp $BS_ROOT_DIRECTORY/etc/elasticsearch/logging.yml $BS_ES_PATH_CONF/logging.yml
+            sudo cp $BS_ROOT_DIRECTORY/etc/elasticsearch/logging.yml $BS_ES_PATH_CONF
         fi
 
     elif [ ! -f $BS_ROOT_DIRECTORY/etc/elasticsearch/logging.yml ]; then
@@ -90,7 +90,7 @@ transportCustomElasticSearchConf()
 {
     if [ ! -f $BS_ES_PATH_CONF/elasticsearch.yml ] && [ -f $BS_ROOT_DIRECTORY/etc/elasticsearch/elasticsearch.yml ]; then
 
-        sudo cp $BS_ROOT_DIRECTORY/etc/elasticsearch/elasticsearch.yml $BS_ES_PATH_CONF/elasticsearch.yml
+        sudo cp $BS_ROOT_DIRECTORY/etc/elasticsearch/elasticsearch.yml $BS_ES_PATH_CONF
 
     elif [ -f $BS_ES_PATH_CONF/elasticsearch.yml ] && [ -f $BS_ROOT_DIRECTORY/etc/elasticsearch/elasticsearch.yml ]; then
 
@@ -98,7 +98,7 @@ transportCustomElasticSearchConf()
         local srcFile=$(sudo md5sum $BS_ROOT_DIRECTORY/etc/elasticsearch/elasticsearch.yml)
 
         if [ "$destFile" != "$srcFile" ]; then
-            sudo cp $BS_ROOT_DIRECTORY/etc/elasticsearch/elasticsearch.yml $BS_ES_PATH_CONF/elasticsearch.yml
+            sudo cp $BS_ROOT_DIRECTORY/etc/elasticsearch/elasticsearch.yml $BS_ES_PATH_CONF
         fi
 
     elif [ ! -f $BS_ROOT_DIRECTORY/etc/elasticsearch/elasticsearch.yml ]; then

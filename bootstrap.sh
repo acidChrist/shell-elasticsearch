@@ -23,6 +23,11 @@ fi
 source $BS_ROOT_DIRECTORY/options.sh
 source $BS_ROOT_DIRECTORY/services.sh
 
+if [ ! -d $BS_ES_PATH_CONF ]; then
+    sudo mkdir -p $BS_ES_PATH_CONF
+fi
+
+BS_ES_PACKAGE_URL=https://download.elasticsearch.org/elasticsearch/elasticsearch/$BS_ES_PACKAGE_NAME
 
 #Installing dependencies
 installCurl
