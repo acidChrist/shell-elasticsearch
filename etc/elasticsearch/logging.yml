@@ -58,8 +58,3 @@ appender:
     layout: 
       type: pattern
       conversionPattern: org.apache.log4j.PatternLayout
-
-#appender.stdout=org.apache.log4j.ConsoleAppender
-#appender.stdout.layout=org.apache.log4j.PatternLayout
-#appender.stdout.layout.ConversionPattern=%5p %d{HH:mm:ss,SSS} %m%n
-
